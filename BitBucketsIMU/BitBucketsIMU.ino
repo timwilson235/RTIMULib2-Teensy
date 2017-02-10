@@ -148,6 +148,10 @@ void setup()
   while (!Serial) {
       ; // wait for serial port to connect. 
   }
+
+  // Identify self on startup
+  Serial.println( "TeensyIMU hello!");
+  
   Wire.begin();
   settings = new RTIMUSettings();
   // change configurations here if you need to as there is no SD card and therefore no ini file.
